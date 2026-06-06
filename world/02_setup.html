@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>② 設置手順｜ワールド設置ガイド</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+<header class="bn"><img src="../assets/banner.png" alt="GotchaPins"></header>
+<div class="card-page">
+  <nav class="nav"><a class="home" href="index.html">☰ 目次</a><a href="01_prepare.html">← 前へ</a><a href="03_play.html">次へ →</a></nav>
+  <span class="step-no">STEP 2 / 5</span>
+  <h1>設置手順（3ステップ）</h1>
+
+  <ol class="steps">
+    <li><b>unitypackage をインポート</b><br>ワールドのプロジェクトを開いた状態で、<code>.unitypackage</code> をダブルクリック →「Import」。</li>
+    <li><b>ピンバッジのセットをシーンに置く</b><br><code>Assets/GotchaPins/(商品名フォルダ)/ワールド用アバター追従ギミック版/</code> の中の <b>追従版セット</b> Prefab を、シーンの好きな場所にドラッグ＆ドロップ。<br><span class="lead">※ ディスプレイには最初から台紙が入っています。掴むとピンズ本体だけ外れ、台紙が展示位置に残ります。</span></li>
+    <li><b>管理オブジェクトを1個だけ置く ★重要</b><br><code>Assets/GotchaPins/Common/</code> の中の <code>GotchaPins_PinManager</code> Prefab を、シーンに<b>1個だけ</b>ドラッグ＆ドロップ。</li>
+  </ol>
+
+  <img class="fig" src="../assets/figures/manager_concept.png" alt="Manager1個で複数ピンズを共有する概念図">
+
+  <div class="tip">💡 Managerはピンバッジの追従を動かす「管理役」です。<b>シーンに1個あれば、何個ピンバッジを置いても共有されます。</b>置くだけでシーン内のピンバッジに<b>自動接続</b>されます。</div>
+
+  <div class="note">✅ もしManagerを置き忘れたままアップロードしようとすると、ビルド時に「管理オブジェクトが見つかりません。配置しますか？」とポップアップが出ます。<b>「配置する」</b>を選べばその場で自動配置・接続されます。</div>
+
+  <p>あとは通常どおりワールドをアップロードすれば完成です。</p>
+
+  <nav class="nav"><a class="home" href="index.html">☰ 目次</a><a href="01_prepare.html">← 前へ</a><a href="03_play.html">次へ →</a></nav>
+</div>
+<footer>
+<div class="tag">あなたの&quot;好き&quot;、ピンズにします</div>
+GotchaPins（ごちゃピン）｜ X: <a href="https://x.com/gotchapins">@gotchapins</a> ｜ <a href="https://gotchapins.booth.pm">gotchapins.booth.pm</a>
+</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>⑤ よくある質問｜ワールド設置ガイド</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+<header class="bn"><img src="../assets/banner.png" alt="GotchaPins"></header>
+<div class="card-page">
+  <nav class="nav"><a class="home" href="index.html">☰ 目次</a><a href="04_parts.html">← 前へ</a><a class="disabled">次へ →</a></nav>
+  <span class="step-no">STEP 5 / 5</span>
+  <h1>よくある質問（Q&amp;A）</h1>
+  <p class="lead">気になる項目をタップで開いてください。</p>
+
+  <details><summary>ピンバッジを増やしたい（何種類も置きたい）</summary>
+    <div class="body"><p>セットPrefabをいくつでも置いてOK。<b>Managerは1個のまま</b>で全部に共有されます。増やすたびに自動で接続されます。</p></div>
+  </details>
+  <details><summary>掴めるのに、離しても体に付かない／追従しない</summary>
+    <div class="body"><p>シーンに <code>GotchaPins_PinManager</code> が無い可能性大。1個置いてください（<a href="02_setup.html">② 設置手順</a>の手順3）。置けば自動接続されます。</p></div>
+  </details>
+  <details><summary>飾り台・台紙・スタンドを変えたい</summary>
+    <div class="body"><p>セットの中の「ディスプレイ」に好きなモデルを入れてください（初期状態ではこの商品の台紙が入っています）。</p></div>
+  </details>
+  <details><summary>ピンバッジの最初の表示位置を変えたい</summary>
+    <div class="body"><p>セットの中の「ピンズ本体」を動かして好きな位置に置いてください。そこが初期位置（リセットで戻る場所）になります。</p></div>
+  </details>
+  <details><summary>リセットボタンの見た目を変えたい</summary>
+    <div class="body"><p>「リセットボタン」のモデルを好きなものに差し替えてOKです。<b><code>PinResetButton</code> コンポーネントだけは残してください</b>（押す機能の本体です）。</p></div>
+  </details>
+  <details><summary>追従をもっとキビキビ／ゆったりにしたい</summary>
+    <div class="body"><p>ピンズ本体の <code>worldLerp</code> / <code>glideLerp</code> の数値を上げる（キビキビ）／下げる（ゆったり）。詳しくは<a href="04_parts.html">④ プロパティ詳細</a>。</p></div>
+  </details>
+  <details><summary>アップロード時に「管理オブジェクトが見つかりません」と出た</summary>
+    <div class="body"><p>Managerの置き忘れです。ポップアップの<b>「配置する」</b>を選べば自動で配置・接続されます。</p></div>
+  </details>
+  <details><summary>ボーン固定の操作がわからない</summary>
+    <div class="body"><p>ピンバッジを掴んでいる間に <b>USE</b> を押すと、その時のボーンに固定／もう一度USEで解除です。ボーンを固定した後は、ボーンから離れた位置にも設置できます。</p></div>
+  </details>
+  <details><summary>Quest対応について</summary>
+    <div class="body"><p>本商品は PC（Windows）ワールドでの利用を想定しています。Quest対応ワールドで使う場合は、シェーダーやパフォーマンス制限にご注意ください。</p></div>
+  </details>
+
+  <div class="tip">解決しないときは X <a href="https://x.com/gotchapins">@gotchapins</a> までお気軽にどうぞ。</div>
+
+  <nav class="nav"><a class="home" href="index.html">☰ 目次</a><a href="04_parts.html">← 前へ</a><a class="disabled">次へ →</a></nav>
+</div>
+<footer>
+<div class="tag">あなたの&quot;好き&quot;、ピンズにします</div>
+GotchaPins（ごちゃピン）｜ X: <a href="https://x.com/gotchapins">@gotchapins</a> ｜ <a href="https://gotchapins.booth.pm">gotchapins.booth.pm</a>
+</footer>
+</div>
+</body>
+</html>

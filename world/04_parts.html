@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>④ セットの中身とプロパティ｜ワールド設置ガイド</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+<header class="bn"><img src="../assets/banner.png" alt="GotchaPins"></header>
+<div class="card-page">
+  <nav class="nav"><a class="home" href="index.html">☰ 目次</a><a href="03_play.html">← 前へ</a><a href="05_qa.html">次へ →</a></nav>
+  <span class="step-no">STEP 4 / 5</span>
+  <h1>セットの中身とプロパティ</h1>
+  <p>追従版セットを開くと、3つの部品が入っています。</p>
+
+  <img class="fig" src="../assets/figures/set_parts.png" alt="セット3部品の分解図：ピンズ本体・ディスプレイ・リセットボタン">
+
+  <table>
+    <tr><th>部品</th><th>役割</th><th>触っていい？</th></tr>
+    <tr><td><b>ピンズ本体</b></td><td>掴む・装着・追従する本体</td><td>位置を変えてOK（そこが初期位置になります）</td></tr>
+    <tr><td><b>ディスプレイ</b></td><td>飾り台の置き場（<b>最初から台紙入り</b>）</td><td>台紙・スタンドを入れ替えてOK</td></tr>
+    <tr><td><b>リセットボタン</b></td><td>押すとピンバッジが初期位置に戻る</td><td>見た目は差し替えOK（機能は残す）</td></tr>
+  </table>
+
+  <div class="tip">💡「ディスプレイ」には初期状態で<b>この商品の台紙</b>が入っています。掴むとピンズ本体だけ外れ、台紙が展示位置に残ります。台紙・アクスタ・展示スタンドなど、お好みに入れ替えできます。</div>
+
+  <details><summary>⚙ ピンズ本体のプロパティ詳細（調整したい人向け・基本は初期値のままでOK）</summary>
+    <div class="body">
+    <table>
+      <tr><th>項目</th><th>初期値</th><th>説明</th></tr>
+      <tr><td><b>manager</b></td><td>（自動）</td><td>管理オブジェクトを指す欄。<b>自分で触らなくてOK</b>（Managerを置けば自動設定）</td></tr>
+      <tr><td><b>syncInterval</b></td><td>0.1</td><td>掴んで動かす間、自分のピン位置を他プレイヤーへ送る間隔（秒）。小さいほど滑らか／通信量増</td></tr>
+      <tr><td><b>glideTime</b></td><td>0.12</td><td>装着・解除した瞬間にスッと寄るアニメの長さ（秒）。見た目の演出</td></tr>
+      <tr><td><b>worldLerp</b></td><td>12</td><td>手放して置いた時・他人が持つのを見る時に、同期位置へ追いつく速さ。大きいほどキビキビ</td></tr>
+      <tr><td><b>glideLerp</b></td><td>14</td><td>装着直後のグライド中にボーンへ吸い付く速さ。大きいほど速くピタッと付く</td></tr>
+    </table>
+    </div>
+  </details>
+
+  <nav class="nav"><a class="home" href="index.html">☰ 目次</a><a href="03_play.html">← 前へ</a><a href="05_qa.html">次へ →</a></nav>
+</div>
+<footer>
+<div class="tag">あなたの&quot;好き&quot;、ピンズにします</div>
+GotchaPins（ごちゃピン）｜ X: <a href="https://x.com/gotchapins">@gotchapins</a> ｜ <a href="https://gotchapins.booth.pm">gotchapins.booth.pm</a>
+</footer>
+</div>
+</body>
+</html>
