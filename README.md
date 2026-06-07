@@ -12,13 +12,13 @@ https://yukilens.github.io/gotchapins-guide/
 | `avatar/` | アバターに付けるガイド（目次＋5ページ） |
 | `world/` | ワールドに設置するガイド（目次＋5ページ） |
 | `terms.html` | 利用規約・クレジット |
-| `assets/` | CSS・ロゴ・バナー・図解（`figures/`） |
+| `assets/` | CSS・ロゴ・バナー・操作スクショ（`shots/`） |
 
 ## 編集方針（重要）
 - **このフォルダが共通ガイドのマスター**。
 - 商品パッケージ同梱のランディングカードは、このガイドへ **Pages URL** でリンクしている。
 - したがって **ガイドの更新は push するだけで全商品に反映**される（パッケージの再配布は不要）。
-- 図解（`assets/figures/`）の本番差し替えもここで行う。
+- 操作スクショ（`assets/shots/`）の差し替えもここで行う。
 
 ## Pages 公開手順
 1. GitHub で `gotchapins-guide` リポジトリを作成（yukilens アカウント）。
