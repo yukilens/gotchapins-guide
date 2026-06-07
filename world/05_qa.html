@@ -21,6 +21,18 @@
   <details><summary>掴めるのに、離しても体に付かない／追従しない</summary>
     <div class="body"><p>シーンに <code>GotchaPins_PinManager</code> が無い可能性大。1個置いてください（<a href="02_setup.html">② 設置手順</a>の手順3）。置けば自動接続されます。</p></div>
   </details>
+  <details><summary>腕や指に装着できない</summary>
+    <div class="body"><p>仕様です。アバター追従ギミックの追従先ボーンは、ピンバッジを主に装着するであろうボーンに絞って追従するようにしています。現在の候補は<b>胴体4＋頭1の計5ボーン</b>です。</p>
+    <table>
+      <tr><th>候補ボーン</th><th>用途イメージ</th></tr>
+      <tr><td><code>Chest</code></td><td>胸</td></tr>
+      <tr><td><code>UpperChest</code></td><td>胸上部</td></tr>
+      <tr><td><code>Spine</code></td><td>背・腹</td></tr>
+      <tr><td><code>Hips</code></td><td>腰</td></tr>
+      <tr><td><code>Head</code></td><td>頭</td></tr>
+    </table>
+    <p>除外：肩・腕・脚・足・手・指・つま先（自分の腕などに意図せず吸着するのを防ぐためです）。</p></div>
+  </details>
   <details><summary>飾り台・台紙・スタンドを変えたい</summary>
     <div class="body"><p>セットの中の「ディスプレイ」に好きなモデルを入れてください（初期状態ではこの商品の台紙が入っています）。</p></div>
   </details>

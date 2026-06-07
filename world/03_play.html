@@ -12,7 +12,7 @@
 <div class="card-page">
   <nav class="nav"><a class="home" href="index.html">☰ 目次</a><a href="02_setup.html">← 前へ</a><a href="04_parts.html">次へ →</a></nav>
   <span class="step-no">STEP 3 / 5</span>
-  <h1>遊び方（来場者の操作）</h1>
+  <h1>遊び方（ピンバッジを装着する方法）</h1>
   <p class="lead">ワールドに来た人は、こう操作します。来場者向けの説明として、そのまま掲示してもOKです。</p>
 
   <p>全体の流れは <b>掴む → 体に近づける → 離して装着 → 外す</b> の4ステップです。</p>
@@ -21,6 +21,16 @@
     <li><b>掴む</b><br>ピンバッジを掴む（デスクトップ：左クリック ／ VR：グリップ）。</li>
     <li><b>体に近づける</b><br>装着できる位置に近づくと<b>緑のマーカー</b>が出ます（＝ここに付けられる合図）。
       <img class="fig" src="../assets/shots/play-01-marker.png" alt="ピンバッジを身体に近づけると緑のマーカーが出る">
+      <div class="note">📌 <b>追従先ボーンの仕様</b><br>アバター追従ギミックの追従先ボーンは、ピンバッジを主に装着するであろうボーンに絞って追従するようにしています。現在の候補は<b>胴体4＋頭1の計5ボーン</b>です。</div>
+      <table>
+        <tr><th>候補ボーン</th><th>用途イメージ</th></tr>
+        <tr><td><code>Chest</code></td><td>胸</td></tr>
+        <tr><td><code>UpperChest</code></td><td>胸上部</td></tr>
+        <tr><td><code>Spine</code></td><td>背・腹</td></tr>
+        <tr><td><code>Hips</code></td><td>腰</td></tr>
+        <tr><td><code>Head</code></td><td>頭</td></tr>
+      </table>
+      <p class="lead">※ 除外：肩・腕・脚・足・手・指・つま先</p>
     </li>
     <li><b>離して装着</b><br>緑の状態で手を離すと、<b>マーカーが出ているボーンに装着されて体に追従</b>します。
       <img class="fig" src="../assets/shots/play-02-attach.png" alt="手を離すとマーカーの出ているボーンに装着される">
