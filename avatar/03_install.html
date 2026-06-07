@@ -16,13 +16,29 @@
   <p class="lead">インポートからアップロードまで。ひとつずつ進めれば大丈夫です。</p>
 
   <ol class="steps">
-    <li><b>unitypackage をインポート</b><br>アバターのプロジェクトを開いた状態で、ダウンロードした <code>.unitypackage</code> をダブルクリック →「Import」。</li>
-    <li><b>ピンバッジをシーンに出す</b><br><code>Assets/GotchaPins/</code> の中のピンバッジ Prefab を、Hierarchy のアバターの近くにドラッグ＆ドロップ。Prefab内の <code>汎用_ピンズ台紙</code> は<b>非表示</b>にしてください。</li>
-    <li><b>付けたい位置へ動かす</b><br>Sceneビューで Move／Rotate／Scale を使い、付けたい場所（胸元・襟・頭など）に<b>だいたいの位置</b>を合わせます。</li>
-    <li><b>ボーンの子にする（いちばん大事）</b><br>アバターの骨組み（Armature）から付けたい部位の<b>ボーン</b>を探し、ピンバッジをそのボーンの<b>子</b>になるようにドラッグして入れます。<br>→ どのボーンを選ぶかは <a href="04_bone.html">④ ボーン選びの目安</a> を参照。</li>
+    <li><b>unitypackage をインポート</b><br>アバターのプロジェクトを開いた状態で、ダウンロードした <code>.unitypackage</code> をダブルクリック →「Import」。
+      <img class="fig" src="../assets/shots/install-01-import-1.png" alt="unitypackageをダブルクリック">
+      <img class="fig" src="../assets/shots/install-01-import-2.png" alt="Importウィンドウでインポート">
+    </li>
+    <li><b>ピンバッジをシーンに出す</b><br><code>Assets/GotchaPins/</code> の中のピンバッジ Prefab を、Hierarchy のアバターの近くにドラッグ＆ドロップ。Prefab内の <code>汎用_ピンズ台紙</code> は<b>非表示</b>にしてください。
+      <img class="fig" src="../assets/shots/install-02-place-1.png" alt="Prefabをシーンにドラッグ＆ドロップ">
+      <img class="fig" src="../assets/shots/install-02-place-2.png" alt="台紙を非表示にする">
+    </li>
+    <li><b>付けたい位置へ動かす</b><br>Sceneビューで Move／Rotate／Scale を使い、付けたい場所（胸元・襟・頭など）に<b>だいたいの位置</b>を合わせます。
+      <img class="fig" src="../assets/shots/install-03-move.png" alt="付けたい位置へ動かす">
+    </li>
+    <li><b>ボーンの子にする（いちばん大事）</b><br>アバターの骨組み（Armature）から付けたい部位の<b>ボーン</b>を探し、ピンバッジをそのボーンの<b>子</b>になるようにドラッグして入れます。<br>→ どのボーンを選ぶかは <a href="04_bone.html">④ ボーン選びの目安</a> を参照。
+      <img class="fig" src="../assets/shots/install-04-bone-1.png" alt="ボーンを探す">
+      <img class="fig" src="../assets/shots/install-04-bone-2.png" alt="ボーンの子になるようドラッグして入れる">
+    </li>
     <li><b>微調整</b><br>ボーンの子に入れた状態で、位置・回転・大きさを最終調整します。</li>
-    <li><b>ちゃんと付いてるか確認</b><br>Playモードで体や首を動かし、ピンバッジが<b>体と一緒に動けば成功</b>です。（GestureManager などがあると確認しやすいです）</li>
-    <li><b>アップロード</b><br>いつものアバターアップロード手順でアップロードすれば完了です。</li>
+    <li><b>ちゃんと付いてるか確認</b><br>Playモードで体や首を動かし、ピンバッジが<b>体と一緒に動けば成功</b>です。（GestureManager などがあると確認しやすいです）
+      <img class="fig" src="../assets/shots/install-06-check.png" alt="Playモードで追従を確認">
+      <div class="note">📖 GestureManagerの導入方法はこちら：<a href="https://vrnavi.jp/gesture-manager-dounyuu/" target="_blank" rel="noopener">2026年最新【最強ツール】 Gesture Managerを導入してunity上でギミック導入を確認しよう(VRChat)</a></div>
+    </li>
+    <li><b>アップロード</b><br>いつものアバターアップロード手順でアップロードすれば完了です。
+      <img class="fig" src="../assets/shots/install-07-upload.png" alt="アバターをアップロード">
+    </li>
   </ol>
 
   <div class="tip">うまく付かない・ずれるときは <a href="05_qa.html">⑤ Q&amp;A</a> を確認してください。</div>

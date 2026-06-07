@@ -15,18 +15,51 @@
   <h1>設置手順（3ステップ）</h1>
 
   <ol class="steps">
-    <li><b>unitypackage をインポート</b><br>ワールドのプロジェクトを開いた状態で、<code>.unitypackage</code> をダブルクリック →「Import」。</li>
-    <li><b>ピンバッジのセットをシーンに置く</b><br><code>Assets/GotchaPins/(商品名フォルダ)/ワールド用アバター追従ギミック版/</code> の中の <b>追従版セット</b> Prefab を、シーンの好きな場所にドラッグ＆ドロップ。<br><span class="lead">※ ディスプレイには最初から台紙が入っています。掴むとピンズ本体だけ外れ、台紙が展示位置に残ります。</span></li>
-    <li><b>管理オブジェクトを1個だけ置く ★重要</b><br><code>Assets/GotchaPins/Common/</code> の中の <code>GotchaPins_PinManager</code> Prefab を、シーンに<b>1個だけ</b>ドラッグ＆ドロップ。</li>
+    <li><b>unitypackage をインポート</b><br>ワールドのプロジェクトを開いた状態で、<code>.unitypackage</code> をダブルクリック →「Import」。
+      <img class="fig" src="../assets/shots/setup-01-import.png" alt="unitypackageをインポート">
+    </li>
+    <li><b>ピンバッジのセットをシーンに置く</b><br><code>Assets/GotchaPins/(商品名フォルダ)/ワールド用アバター追従ギミック版/</code> の中の <b>追従版セット</b> Prefab を、シーンの好きな場所にドラッグ＆ドロップ。<br><span class="lead">※ ディスプレイには最初から台紙が入っています。掴むとピンズ本体だけ外れ、台紙が展示位置に残ります。</span>
+      <img class="fig" src="../assets/shots/setup-02-place-set.png" alt="追従版セットPrefabをシーンに配置">
+    </li>
+    <li><b>管理オブジェクトを1個だけ置く ★重要</b><br><code>Assets/GotchaPins/Common/</code> の中の <code>GotchaPins_PinManager</code> Prefab を、シーンに<b>1個だけ</b>ドラッグ＆ドロップ。
+      <img class="fig" src="../assets/shots/setup-03-manager.png" alt="GotchaPins_PinManagerを1個だけ配置">
+    </li>
   </ol>
-
-  <img class="fig" src="../assets/figures/manager_concept.png" alt="Manager1個で複数ピンズを共有する概念図">
 
   <div class="tip">💡 Managerはピンバッジの追従を動かす「管理役」です。<b>シーンに1個あれば、何個ピンバッジを置いても共有されます。</b>置くだけでシーン内のピンバッジに<b>自動接続</b>されます。</div>
 
   <div class="note">✅ もしManagerを置き忘れたままアップロードしようとすると、ビルド時に「管理オブジェクトが見つかりません。配置しますか？」とポップアップが出ます。<b>「配置する」</b>を選べばその場で自動配置・接続されます。</div>
 
   <p>あとは通常どおりワールドをアップロードすれば完成です。</p>
+
+  <h2>追従ギミックが不要な場合</h2>
+  <p>アバター追従ギミックが必要なければ、<code>Assets/GotchaPins/</code> 配下にある <b>素のPrefab</b>（ギミック無し）をシーンに追加してください。こちらは飾るだけの静的な展示用で、<b><code>GotchaPins_PinManager</code> の設置も不要</b>です。</p>
+
+  <img class="fig" src="../assets/shots/setup-no-gimmick.png" alt="ギミック無しの素Prefabを配置する例">
+
+  <h2>Manager のプロパティ</h2>
+  <p>基本は<b>初期値のままでOK</b>です。装着の付きやすさやマーカーの色を調整したい場合だけ、下を開いてください。</p>
+
+  <details><summary>⚙ Manager のプロパティ詳細（調整したい人向け・基本は初期値のままでOK）</summary>
+    <div class="body">
+    <img class="fig" src="../assets/shots/setup-manager-props.png" alt="PinManagerのInspector：装着判定と可視化">
+    <h3>装着判定</h3>
+    <table>
+      <tr><th>項目</th><th>初期値</th><th>説明</th></tr>
+      <tr><td><b>attachRange</b></td><td>0.25</td><td>装着が確定する距離（m）。ボーンにこの距離まで近づけて手を離すと装着（マーカーが緑）。小さいほどピッタリ近づけないと付かない／大きいほど大ざっぱでも付く</td></tr>
+      <tr><td><b>previewRange</b></td><td>0.4</td><td>候補マーカーが出始める距離（m）。attachRange〜previewRangeの間はグレー＝離すと装着されずその場にドロップ。<b>必ず attachRange より大きく</b></td></tr>
+      <tr><td><b>coarseRadius</b></td><td>2.5</td><td>負荷削減用の粗い距離（m）。通常は触らなくてOK（自動で十分な値が確保されます）</td></tr>
+    </table>
+    <h3>可視化（マーカーの色）</h3>
+    <table>
+      <tr><th>項目</th><th>初期色</th><th>説明</th></tr>
+      <tr><td><b>inRangeColor</b></td><td>緑</td><td>装着可（ここで離せば付く）を示す色</td></tr>
+      <tr><td><b>outRangeColor</b></td><td>グレー</td><td>範囲外（離すと付かずその場ドロップ）を示す色</td></tr>
+      <tr><td><b>lockedColor</b></td><td>シアン</td><td>ボーン固定中を示す色</td></tr>
+    </table>
+    <div class="note">色はお好みで変えてOKです。<code>marker</code> / <code>line</code> の欄は配置時に自動設定されるので、<b>触らなくて大丈夫</b>です。</div>
+    </div>
+  </details>
 
   <nav class="nav"><a class="home" href="index.html">☰ 目次</a><a href="01_prepare.html">← 前へ</a><a href="03_play.html">次へ →</a></nav>
 </div>
